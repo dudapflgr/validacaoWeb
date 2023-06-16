@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/geral.css">
+    <script src="/scripts/login.js"></script>
+    <script src="/scripts/cadastro.js"></script>
+    <title>Página cadastro</title>
+</head>
+<body onload="loadPage()">
+    <header>
+        <nav>
+            <a class="link" href="/protegido/index.html">Voltar</a>
+            <a class="link" href="/login.html" onclick="logout()">Log-out</a>
+            <a class="logo">DUDA SYSTEM</a>
+        </nav>
+    </header>
+    <main>
+        <form id="dividaForm" action="" enctype="multipart/form-data">
+            <div class="divMain">
+                <div class="box">
+                    <h2>Cliente</h2><br>
+                    <b id="message"></b>
+                    <label for="CPF">CPF*:</label>
+                    <input type="text" maxlength="11" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required="true"
+                    autocomplete="off" id="CPF" name="CPF" onfocusout="formataCPF();carregaCliente()"></input><br>
+                    <label for="nome">Nome*:</label>
+                    <input id="nome" type="text" size="40" maxlength="100" name="nome" required="true"><br>
+                    <label for="email">Email*:</label>
+                    <input id="email" type="email" name="email" placeholder="email@email.com" size="40" maxlength="30" required="true">
+                </div>
+                <div class="box">
+                    <h2>Endereço</h2><br>
+                    <label for="cep">CEP*:</label>
+                    <input id="cep" type="text" maxlength="8" placeholder="00000-000" pattern="\d{5}-\d{3}" name="cep" required="true"
+                    onfocusout="formataCEP()"><br>
+                    <label for="logradouro">Logradouro*:</label>
+                    <input id="logradouro" type="text" maxlength="150" name="logradouro" required="true"><br>
+                    <label for="numero">Número*:</label>
+                    <input id="numero" maxlength="20" type="text" name="numero" required="true"><br>
+                    <label for="complemento">Complemento:</label>
+                    <input id="complemento" type="text" maxlength="100" name="complemento"><br>
+                </div>
+                <hr>
+                <div class="box">
+                    <h2>Dívida</h2><br>
+                    <label for="valor">Valor*:</label>
+                    <input id="valor" maxlength="50" type="number" name="valor" required="true"><br>
+                    <label for="descricao">Descrição*:</label>
+                    <input id="descricao" type="text" size="40" name="descricao" maxlength="150" required="true"><br>
+                    <label for="situacao">Situação*:</label>
+                    <select name="situacao" id="situacao" required="true">
+                        <option value="">Situação</option>
+                        <option value="1">Pendente</option>
+                        <option value="2">Pago</option>  
+                    </select><br><br>
+                    <label for="processo">Número do processo</label>
+                    <input id="processo" type="number" name="processo"><br>
+                    <label for="comprovante">Comprovante</label>
+                    <input id="comprovante" type="file" name="comprovante">
+                </div>
+                <br>
+                <hr>
+                <br>
+                <button id="btnCadastro" type='button' class="btnCadastro" onclick="cadastrarAtualizarDivida()">Cadastrar</button>
+              </div>
+        </form>
+    </main>
+</body>
+</html>

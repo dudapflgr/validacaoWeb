@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/geral.css">
+    <script src="/scripts/lista.js"></script>
+    <script src="/scripts/login.js"></script>
+    <title>Lista</title>
+</head>
+<body onload="autenticado();carregarDividas()">
+    <header>
+        <nav>
+            <a class="link" href="/protegido/index.html">Voltar</a>
+            <a class="link" href="/login.html" onclick="logout()">Log-out</a>
+            <a class="logo">DUDA SYSTEM</a>
+        </nav>
+    </header>
+    <div id="form" >
+        <div>
+            <table id="tabela">
+                <tbody id="body-tabela">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Valor</th>
+                        <th>Descrição da dívida</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

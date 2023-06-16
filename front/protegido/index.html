@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/geral.css">
+    <script src="/scripts/login.js"></script>
+    <title>Página principal</title>
+</head>
+<body onload="autenticado()">
+    <header>
+        <nav>
+          <a class="logo">DUDA SYSTEM</a>
+        </nav>
+    </header>
+    <div class="cards">
+        <div class="card">
+            <div class="container">
+              <h4><a href="/protegido/cadastro.html">Cadastrar dívida</a></h4>
+              <p>Realize o cadastro de uma dívida</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+              <h4><a href="/protegido/lista.html">Dividas cadastradas</a></h4>
+              <p>Visualizar as dívidas</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+              <h4><a href="/login.html" onclick="logout()">Log-out</a></h4>
+              <p>Sair da aplicação</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
